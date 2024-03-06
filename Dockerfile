@@ -17,4 +17,4 @@ WORKDIR /app
 COPY . /app
 
 
-CMD uvicorn main:app --reload --port=8000 --host=0.0.0.0
+CMD uvicorn main:app --port=8000 --host=0.0.0.0
