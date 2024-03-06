@@ -1,0 +1,10 @@
+# build  and start the container 
+docker compose -f <yml file> up --build -d (-d for detaching)
+
+
+# stop the container 
+docker stop <container_id>
+
+# to see running containers
+docker ps -a 
+
