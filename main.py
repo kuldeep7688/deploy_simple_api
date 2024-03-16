@@ -6,4 +6,4 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello == {}!!! 33".format(env['MY_VARIABLE'])}
+    return {"message": "Hello World == {}!!! 33".format(env['MY_VARIABLE'])}

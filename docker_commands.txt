@@ -8,3 +8,21 @@ docker stop <container_id>
 # to see running containers
 docker ps -a 
 
+# useful command to push to gcp 
+gcloud auth login
+gcloud auth configure-docker us-central
+gcloud artifacts repositories list
+
+
+# how to update the image and container in APP:
+1) Build and test development , staging and deploy im
+    - using 
+docker compose -f <yml file> up --build -d (-d for detaching)
+
+2) Now "gcloud init" select the project 
+3) build images using "docker build -t gcr.io/passionate-ai-backend/resumeparse:v0.1 ."
+    - take care of the versioning 
+4) Now push the image to gcloud artifacts repositories
+    - using "gcloud push gcr.io/passionate-ai-backend/resumeparse:v0.1"
+5) Go to the project and EDIT and Deploy API
+6) Change the container in edit and deploy the API
